@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chatbot</title>
+    <style>
+        .chatbot { width: 300px; margin: auto; }
+        #chatbox { height: 300px; border: 1px solid #ccc; padding: 10px; overflow-y: scroll; margin-bottom: 10px; }
+        input { width: 80%; padding: 8px; }
+        button { padding: 8px; }
+    </style>
+</head>
+<body>
+
+<div class="chatbot">
+    <div id="chatbox"></div>
+    <input type="text" id="userInput" placeholder="Type a message..." />
+    <button onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+    function sendMessage() {
+        const input = document.getElementById("userInput");
+        const chatbox = document.getElementById("chatbox");
+        const userText = input.value;
+        chatbox.innerHTML += `<div>User: ${userText}</div>`;
+
+        let botResponse = "I'm just a simple bot.";
+        if (userText.toLowerCase().includes("hello")) {
+            botResponse = "Hello! How can I help you today?";
+        }
+        chatbox.innerHTML += `<div>Bot: ${botResponse}</div>`;
+        chatbox.scrollTop = chatbox.scrollHeight;
+        input.value = "";
+    }
+</script>
+
+</body>
+</html>
