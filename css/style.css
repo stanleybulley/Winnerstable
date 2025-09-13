@@ -10008,3 +10008,15 @@ img {
   object-fit: cover;
   object-position: center;
 }
+.recent-work-section {
+  background-color: #000000; /* Deep black */
+  padding: 60px 0;
+}
+
+.recent-work-heading {
+  color: #ffffff;       /* White text */
+  font-weight: 800;     /* Extra bold */
+  font-size: 2.75rem;   /* Big title */
+  letter-spacing: 1.2px;
+  margin: 0;
+}
