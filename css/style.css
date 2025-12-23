@@ -1,17 +1,4 @@
-/*
-* Template Name: Medio
-* Template Author: Untree.co
-* Template License: https://creativecommons.org/licenses/by/3.0/
-* Author URI: https://untree.co/
 
-* Twitter: https://twitter.com/Untree_co
-* Facebook: https://web.facebook.com/Untree.co/
-*/
-/*!
- * Bootstrap v5.0.0-beta1 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
   --bs-blue: #0d6efd;
@@ -10019,4 +10006,58 @@ img {
   font-size: 2.75rem;   /* Big title */
   letter-spacing: 1.2px;
   margin: 0;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes video cover the area */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Behind content */
+}
+
+.hero.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* Optional dark overlay for readability */
+  z-index: 0;
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;  /* Distance from bottom */
+  right: 20px;   /* Distance from right */
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E; /* Darker green on hover */
+  transform: scale(1.1);
+}
+
+@media (max-width: 576px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 15px;
+    right: 15px;
+  }
 }
