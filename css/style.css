@@ -10061,3 +10061,71 @@ img {
     right: 15px;
   }
 }
+/* ==============================
+   TEAM SECTION FIX
+   ============================== */
+
+/* General card styling */
+.team-member {
+  position: relative;      /* allow any absolute positioning if needed */
+  overflow: visible;       /* allow staff socials to float */
+  padding-bottom: 40px;    /* reserve space for staff floating socials */
+  transition: transform 0.3s;
+}
+
+/* CEO card socials: always visible, inside the card */
+.ceo-card .social {
+  display: flex !important;
+  justify-content: center;
+  gap: 10px;
+  position: relative;      /* inside the card */
+  bottom: 0;               /* stays at bottom of card */
+  left: 0;
+  transform: none;         /* no translation */
+  opacity: 1 !important;
+  visibility: visible !important;
+  margin-top: 10px;        /* spacing from text */
+  z-index: 10;
+}
+
+.ceo-card .social a i {
+  font-size: 18px;
+  color: #000;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.ceo-card .social a:hover i {
+  transform: translateY(-3px);
+  color: #007bff;
+}
+
+/* Staff card socials: floating outside, show on hover desktop */
+.staff-card .social {
+  display: flex !important;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  bottom: -25px;          /* floating below card */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.staff-card:hover .social {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 991px) {
+  .staff-card .social {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Add extra spacing below each column to prevent overlap */
+.team-section .col-md-6 {
+  margin-bottom: 60px;  /* adjust based on staff icon size */
+}
