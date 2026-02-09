@@ -48,7 +48,7 @@
 	<nav class="site-nav">
 		<div class="container">
 			<div class="site-navigation">
-				<a href="#"><img src="New folder (2)/Screenshot 2025-07-10 014237.png" height="10%" width="10%" alt="Image" class="logo m-0"></a>
+				<a href="#"><img src="New folder (2)/logo.jpg" height="10%" width="10%" alt="Image" class="logo m-0"></a>
 				
 
 				<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
@@ -75,27 +75,47 @@
 	</nav>
 
 
-	
-  <!-- Video Background -->
-  <video autoplay muted loop playsinline class="hero-video position-absolute w-100 h-100 top-0 start-0" style="object-fit: cover; z-index: -1;">
+	<section class="hero-section position-relative overflow-hidden">
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="hero-video">
     <source src="New folder (2)/was.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
+  <!-- Overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Content -->
   <div class="container position-relative text-center">
-    <div class="row align-items-center v-h-full">
-      <div class="col-lg-10 col-xxl-6 mx-auto text-center">
-        <h1 class="heading-2 text-white mb-5" data-aos="fade-up">We are Winnerstable Media</h1>
-        <p data-aos="fade-up" data-aos-delay="200">
-          <a href="portfolio.html" class="btn btn-primary-outline white me-4">See Portfolio</a>
-          <a href="https://www.youtube.com/watch?v=zOVAXbcwMKs" class="glightbox d-inline-flex align-items-center playvid">
-            <span class="icon-play me-2"></span>Watch our video
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-10 col-xxl-6 mx-auto">
+
+        <!-- Animated Heading -->
+        <h1 class="hero-heading text-white mb-4 reveal-text">
+          We are Winnerstable Media
+        </h1>
+
+        <p class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+
+          <!-- Portfolio -->
+          <a href="portfolio.html" class="btn hero-btn hero-btn-primary">
+            See Portfolio
           </a>
+
+          <!-- Video -->
+          <a href="https://www.youtube.com/watch?v=zOVAXbcwMKs"
+             class="glightbox btn hero-btn hero-btn-secondary d-inline-flex align-items-center">
+            <span class="icon-play me-2"></span> Watch our video
+          </a>
+
         </p>
+
       </div>
     </div>
   </div>
-</div>
+
+</section>
 
 
 <section class="recent-work-section text-center">
@@ -107,79 +127,84 @@
 
 
 
-	<section class="section bg-light">
+	<section class="section" style="background-color: #2f3744; padding: 60px 0;">
   <div class="container">
     <div class="row g-4">
 
-      <!-- Lazy-loaded Video Block Template -->
+      <!-- Video Block 1 -->
       <div class="col-md-6 col-lg-4">
-        <a href="New folder (2)/dec2.mp4" class="media-1 glightbox-video" data-type="video">
-          <video class="lazy-video img-fluid rounded" muted loop playsinline preload="none" poster="New folder (2)/dec2-poster.jpg">
+        <a href="New folder (2)/dec2.mp4" class="media-1 glightbox-video" data-type="video" style="text-decoration: none;">
+          <video class="lazy-video img-fluid rounded" muted loop playsinline preload="none" poster="New folder (2)/dec2-poster.jpg" style="width: 100%; border-radius: 0.5rem;">
             <source data-src="New folder (2)/dec2.mp4" type="video/mp4">
           </video>
-          <div class="media-1-content">
-            <h2></h2>
-            <span class="category">“If your music was a meal…what would it be?</span>
+          <div class="media-1-content" style="margin-top: 10px; text-align: left;">
+            <h2 style="font-size: 1.1rem; margin: 0; font-weight: 600;"></h2>
+            <span class="category" style="font-size: 0.9rem; color: #555;">“If your music was a meal…what would it be?</span>
           </div>
         </a>
       </div>
 
+      <!-- Video Block 2 -->
       <div class="col-md-6 col-lg-4">
-        <a href="New folder (2)/dec3.mp4" class="media-1 glightbox-video" data-type="video">
-          <video class="lazy-video img-fluid rounded" muted loop playsinline preload="none" poster="New folder (2)/dec3-poster.jpg">
+        <a href="New folder (2)/dec3.mp4" class="media-1 glightbox-video" data-type="video" style="text-decoration: none;">
+          <video class="lazy-video img-fluid rounded" muted loop playsinline preload="none" poster="New folder (2)/dec3-poster.jpg" style="width: 100%; border-radius: 0.5rem;">
             <source data-src="New folder (2)/dec3.mp4" type="video/mp4">
           </video>
-          <div class="media-1-content">
-            <h2>@jahthestoryteller</h2>
-            <span class="category">R&B Cypher</span>
+          <div class="media-1-content" style="margin-top: 10px; text-align: left;">
+            <h2 style="font-size: 1.1rem; margin: 0; font-weight: 600;">@jahthestoryteller</h2>
+            <span class="category" style="font-size: 0.9rem; color: #555;">R&B Cypher</span>
           </div>
         </a>
       </div>
 
+      <!-- Video Block 3 -->
       <div class="col-md-6 col-lg-4">
-        <a href="New folder (2)/dec4.mp4" class="media-1 glightbox-video" data-type="video">
-          <video class="lazy-video img-fluid rounded" muted loop playsinline preload="none" poster="New folder (2)/dec4-poster.jpg">
+        <a href="New folder (2)/dec4.mp4" class="media-1 glightbox-video" data-type="video" style="text-decoration: none;">
+          <video class="lazy-video img-fluid rounded" muted loop playsinline preload="none" poster="New folder (2)/dec4-poster.jpg" style="width: 100%; border-radius: 0.5rem;">
             <source data-src="New folder (2)/dec4.mp4" type="video/mp4">
           </video>
-          <div class="media-1-content">
-            <h2>@lexongod</h2>
-            <span class="category">R&B Cypher</span>
+          <div class="media-1-content" style="margin-top: 10px; text-align: left;">
+            <h2 style="font-size: 1.1rem; margin: 0; font-weight: 600;">@lexongod</h2>
+            <span class="category" style="font-size: 0.9rem; color: #555;">R&B Cypher</span>
           </div>
         </a>
       </div>
 
+      <!-- Video Block 4 -->
       <div class="col-md-6 col-lg-4">
-        <a href="New folder (2)/new1.mp4" class="media-1 glightbox-video" data-type="video">
-          <video class="lazy-video img-fluid rounded" muted loop playsinline preload="none" poster="New folder (2)/new1-poster.jpg">
+        <a href="New folder (2)/new1.mp4" class="media-1 glightbox-video" data-type="video" style="text-decoration: none;">
+          <video class="lazy-video img-fluid rounded" muted loop playsinline preload="none" poster="New folder (2)/new1-poster.jpg" style="width: 100%; border-radius: 0.5rem;">
             <source data-src="New folder (2)/new1.mp4" type="video/mp4">
           </video>
-          <div class="media-1-content">
-            <h2>@1jcriss_</h2>
-            <span class="category"></span>
+          <div class="media-1-content" style="margin-top: 10px; text-align: left;">
+            <h2 style="font-size: 1.1rem; margin: 0; font-weight: 600;">@1jcriss_</h2>
+            <span class="category" style="font-size: 0.9rem; color: #555;"></span>
           </div>
         </a>
       </div>
 
+      <!-- Video Block 5 -->
       <div class="col-md-6 col-lg-4">
-        <a href="New folder (2)/dec5.mp4" class="media-1 glightbox-video" data-type="video">
-          <video class="lazy-video img-fluid rounded" muted loop playsinline preload="none" poster="New folder (2)/dec5-poster.jpg">
+        <a href="New folder (2)/dec5.mp4" class="media-1 glightbox-video" data-type="video" style="text-decoration: none;">
+          <video class="lazy-video img-fluid rounded" muted loop playsinline preload="none" poster="New folder (2)/dec5-poster.jpg" style="width: 100%; border-radius: 0.5rem;">
             <source data-src="New folder (2)/dec5.mp4" type="video/mp4">
           </video>
-          <div class="media-1-content">
-            <h2>Dancehall Cypher</h2>
-            <span class="category">@official_eastmaankingmusic</span>
+          <div class="media-1-content" style="margin-top: 10px; text-align: left;">
+            <h2 style="font-size: 1.1rem; margin: 0; font-weight: 600;">Dancehall Cypher</h2>
+            <span class="category" style="font-size: 0.9rem; color: #555;">@official_eastmaankingmusic</span>
           </div>
         </a>
       </div>
 
+      <!-- Video Block 6 -->
       <div class="col-md-6 col-lg-4">
-        <a href="New folder (2)/dancehall3.mp4" class="media-1 glightbox-video" data-type="video">
-          <video class="lazy-video img-fluid rounded" muted loop playsinline preload="none" poster="New folder (2)/dancehall3-poster.jpg">
+        <a href="New folder (2)/dancehall3.mp4" class="media-1 glightbox-video" data-type="video" style="text-decoration: none;">
+          <video class="lazy-video img-fluid rounded" muted loop playsinline preload="none" poster="New folder (2)/dancehall3-poster.jpg" style="width: 100%; border-radius: 0.5rem;">
             <source data-src="New folder (2)/dancehall3.mp4" type="video/mp4">
           </video>
-          <div class="media-1-content">
-            <h2>Dancehall Cypher</h2>
-            <span class="category">@geniquemusic</span>
+          <div class="media-1-content" style="margin-top: 10px; text-align: left;">
+            <h2 style="font-size: 1.1rem; margin: 0; font-weight: 600;">Dancehall Cypher</h2>
+            <span class="category" style="font-size: 0.9rem; color: #555;">@geniquemusic</span>
           </div>
         </a>
       </div>
@@ -187,6 +212,7 @@
     </div>
   </div>
 </section>
+
 
 
       <!-- Image Blocks -->
