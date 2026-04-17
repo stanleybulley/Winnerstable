@@ -42,7 +42,7 @@
 	<nav class="site-nav">
 		<div class="container">
 			<div class="site-navigation">
-					<a href="#"><img src="New folder (2)/logo.jpg" height="10%" width="10%" alt="Image" class="logo m-0"></a>
+					<img src="New folder (2)/logo2.png" alt="Logo" class="logo m-0" style="height:100px; width:auto;">
 
 					<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
 					<li class="active"><a href="index.html">Home</a></li>
@@ -114,27 +114,27 @@
       </div>
 
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <a href="New folder (2)/dancehall2" class="media-1 glightbox-video" data-type="video">
+        <a href="New folder (2)/nn.mp4" class="media-1 glightbox-video" data-type="video">
           <video muted autoplay loop class="img-fluid rounded shadow">
-            <source src="New folder (2)/dancehall2" type="video/mp4">
+            <source src="New folder (2)/nn.mp4" type="video/mp4">
             
           </video>
           <div class="media-1-content">
-            <h2>Dancehall Cypher</h2>
-            <span class="category">@malik.english</span>
+            <h2></h2>
+            <span class="category"></span>
           </div>
         </a>
       </div>
 
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <a href="New folder (2)/dancehall1" class="media-1 glightbox-video" data-type="video">
+        <a href="New folder (2)/nn2.mp4" class="media-1 glightbox-video" data-type="video">
           <video muted autoplay loop class="img-fluid rounded shadow">
-            <source src="New folder (2)/dancehall1" type="video/mp4">
+            <source src="New folder (2)/nn2.mp4" type="video/mp4">
             
           </video>
           <div class="media-1-content">
-            <h2>Dancehall Acapella</h2>
-            <span class="category">@@ayanasheree</span>
+            <h2></h2>
+            <span class="category"></span>
           </div>
         </a>
       </div>
@@ -381,33 +381,28 @@
 	<script src="js/rellax.min.js"></script>
 	<script src="js/custom.js"></script>
 
-    <script>
+  <script>
   const lightboxVideo = GLightbox({
     selector: '.glightbox-video',
-    autoplayVideos: true
+    autoplayVideos: true,
+    touchNavigation: true,
+    loop: false,
+    closeButton: true,
+    keyboardNavigation: true
   });
 
-
- const lightboxVideo = GLightbox({
-    selector: '.glightbox-video',
-    autoplayVideos: true
-  });
-
-  // Pause all videos when a lightbox opens
+  // Pause background videos when lightbox opens
   lightboxVideo.on('open', () => {
-    const playingVideos = document.querySelectorAll('video');
-    playingVideos.forEach(video => video.pause());
+    document.querySelectorAll('video').forEach(v => v.pause());
   });
 
-  // Resume muted looping videos after lightbox is closed (optional)
+  // Resume after close
   lightboxVideo.on('close', () => {
-    const mutedVideos = document.querySelectorAll('video[muted]');
-    mutedVideos.forEach(video => {
-      video.currentTime = 0;
-      video.play();
+    document.querySelectorAll('video[muted]').forEach(v => {
+      v.play();
     });
   });
-
 </script>
+
 </body>
 </html>
