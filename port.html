@@ -288,13 +288,13 @@
       </div>
 
        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <a href="New folder (2)/rnb.mp4" class="media-1 glightbox-video" data-type="video">
+        <a href="New folder (2)/neeew.mp4" class="media-1 glightbox-video" data-type="video">
           <video muted autoplay loop class="img-fluid rounded shadow">
-            <source src="New folder (2)/rnb.mp4" type="video/mp4">
+            <source src="New folder (2)/neeew.mp4" type="video/mp4">
             
           </video>
           <div class="media-1-content">
-            <h2>R & B Cypher</h2>
+            <h2></h2>
             <span class="category"></span>
           </div>
         </a>
@@ -371,28 +371,81 @@
 	<script src="js/rellax.min.js"></script>
 	<script src="js/custom.js"></script>
 
-  <script>
-  const lightboxVideo = GLightbox({
-    selector: '.glightbox-video',
-    autoplayVideos: true,
-    touchNavigation: true,
-    loop: false,
-    closeButton: true,
-    keyboardNavigation: true
-  });
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-  // Pause background videos when lightbox opens
-  lightboxVideo.on('open', () => {
-    document.querySelectorAll('video').forEach(v => v.pause());
-  });
-
-  // Resume after close
-  lightboxVideo.on('close', () => {
-    document.querySelectorAll('video[muted]').forEach(v => {
-      v.play();
+    const lightboxVideo = GLightbox({
+        selector: '.glightbox-video',
+        autoplayVideos: true,
+        touchNavigation: true,
+        loop: false,
+        closeButton: true,
+        keyboardNavigation: true
     });
-  });
-</script>
 
+    /*
+     * Keep all portfolio preview videos muted.
+     */
+    document.querySelectorAll('.media-1 video').forEach(video => {
+        video.muted = true;
+        video.setAttribute('muted', '');
+        video.setAttribute('playsinline', '');
+    });
+
+
+    /*
+     * When the lightbox opens:
+     * Pause every background video.
+     */
+    lightboxVideo.on('open', () => {
+
+        document.querySelectorAll('.media-1 video').forEach(video => {
+            video.pause();
+        });
+
+    });
+
+
+    /*
+     * When the lightbox closes:
+     * Stop the lightbox video.
+     * Do NOT resume every background video.
+     */
+    lightboxVideo.on('close', () => {
+
+        document.querySelectorAll('video').forEach(video => {
+            video.pause();
+        });
+
+        /*
+         * Restart the previews silently.
+         */
+        document.querySelectorAll('.media-1 video').forEach(video => {
+            video.muted = true;
+            video.play().catch(() => {});
+        });
+
+    });
+
+
+    /*
+     * Make sure only one video plays at a time.
+     */
+    document.addEventListener('play', function (event) {
+
+        if (event.target.tagName !== 'VIDEO') return;
+
+        document.querySelectorAll('video').forEach(video => {
+
+            if (video !== event.target) {
+                video.pause();
+            }
+
+        });
+
+    }, true);
+
+});
+</script>
 </body>
 </html>
