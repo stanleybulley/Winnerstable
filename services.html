@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,6 +26,52 @@
 
 
 	<title>Winnerstable</title>
+
+	<style>
+		/* Push the carousel's prev/next + dot nav controls below the images */
+		.photo-carousel-section .tns-outer {
+			position: relative;
+		}
+		.photo-carousel-section .tns-controls {
+			position: static;
+			display: flex;
+			justify-content: center;
+			gap: 15px;
+			margin-top: 20px;
+		}
+		.photo-carousel-section .tns-controls button {
+			position: static;
+			background: #000;
+			color: #fff;
+			border: none;
+			padding: 10px 22px;
+			border-radius: 30px;
+			cursor: pointer;
+			font-size: 14px;
+		}
+		.photo-carousel-section .tns-controls button:hover {
+			background: #333;
+		}
+		.photo-carousel-section .tns-nav {
+			position: static;
+			display: flex;
+			justify-content: center;
+			gap: 8px;
+			margin-top: 15px;
+		}
+		.photo-carousel-section .tns-nav button {
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: #ccc;
+			border: none;
+			padding: 0;
+			cursor: pointer;
+		}
+		.photo-carousel-section .tns-nav button.tns-nav-active {
+			background: #000;
+		}
+	</style>
 </head>
 <body>
 
@@ -85,9 +130,6 @@
 		</div>
 
 	</div>
-
-
-
 
 	<div class="section py-5 bg-light">
   <div class="container">
@@ -163,8 +205,8 @@
 						<div class="service-inner">
 							<span></span>
 							<h3>Content </h3>
-							<p>We Create Engaging Contents </p>
-							<p class="mb-0"><a href="#" class="more">Learn more</a></p>
+							<p>We Creative Engaging Content</p>
+							
 						</div>
 
 					</div>
@@ -190,7 +232,7 @@
 						<div class="service-inner">
 							<span></span>
 							<h3>Networking</h3>
-							<p>Winnerstable Media provides collaborative opportunities for creatives and professionals to connect and grow.</p>
+							<p>Winnersta Media provides collaborative opportunities for creatives and professionals to connect and grow.</p>
 							<p class="mb-0"><a href="https://docs.google.com/forms/u/0/d/1tjcCyT9pvh52coMrXi-SUigFeWudU8INa41ZSLQNEVE/viewform?fbclid=PAZXh0bgNhZW0CMTEAAaeF6SMESNtVqNHkvNs5_ryOWYgmDwOGkzhfI4kRjclXrP67W4aGKrJ_7GIzHA_aem_TIJdbgPn8CtOHz0YK9rz0w&edit_requested=true" class="more">Learn more</a></p>
 						</div>
 
@@ -199,6 +241,92 @@
 			</div>
 		</div>
 	</div>
+
+<!-- =========================
+     PHOTO CAROUSEL
+========================= -->
+<div class="section photo-carousel-section">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Our Moments</h2>
+            <p class="text-muted">
+                Capturing creativity, culture, talent and unforgettable experiences.
+            </p>
+        </div>
+
+        <div class="winnerstable-carousel">
+
+            <div class="carousel-item-custom">
+                <img src="New folder (2)/w12.jpeg"
+                     alt="Winnerstable Media"
+                     class="img-fluid">
+
+                <div class="carousel-caption-custom">
+                    <h4>Creative Moments</h4>
+                    <p>Bringing creativity and culture to life.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item-custom">
+                <img src="New folder (2)/w13.jpeg"
+                     alt="Winnerstable Media"
+                     class="img-fluid">
+
+                <div class="carousel-caption-custom">
+                    <h4>Photography</h4>
+                    <p>Visual stories that capture the moment.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item-custom">
+                <img src="New folder (2)/w14.jpeg"
+                     alt="Winnerstable Media"
+                     class="img-fluid">
+
+                <div class="carousel-caption-custom">
+                    <h4>Artists & Talent</h4>
+                    <p>Celebrating talent and creative expression.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item-custom">
+                <img src="New folder (2)/w15.jpeg"
+                     alt="Winnerstable Media"
+                     class="img-fluid">
+
+                <div class="carousel-caption-custom">
+                    <h4>Community</h4>
+                    <p>Connecting people through creativity.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item-custom">
+                <img src="New folder (2)/w29.jpeg"
+                     alt="Winnerstable Media"
+                     class="img-fluid">
+
+                <div class="carousel-caption-custom">
+                    <h4>Events</h4>
+                    <p>Moments worth remembering.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item-custom">
+                <img src="New folder (2)/w20.jpeg"
+                     alt="Winnerstable Media"
+                     class="img-fluid">
+
+                <div class="carousel-caption-custom">
+                    <h4>Winnerstable Media</h4>
+                    <p>Culture. Creativity. Community.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
 
 	<div class="site-footer">
   <div class="container">
@@ -247,15 +375,46 @@
 		</div>
 	</div>
 	
+
+	
 	<script src="script.js" defer></script>
 
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/tiny-slider.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/glightbox.min.js"></script>
+<script src="js/rellax.min.js"></script>
+<script src="js/custom.js"></script>
 
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/tiny-slider.js"></script>
-	<script src="js/aos.js"></script>
-	<script src="js/navbar.js"></script>
-	<script src="js/glightbox.min.js"></script>
-	<script src="js/rellax.min.js"></script>
-	<script src="js/custom.js"></script>
-</body>
-</html>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    tns({
+        container: ".winnerstable-carousel",
+        items: 1,
+        slideBy: 1,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayButtonOutput: false,
+
+        controls: false,
+        nav: true,
+        navPosition: "bottom",
+
+        mouseDrag: true,
+        gutter: 15,
+        speed: 700,
+
+        responsive: {
+            768: {
+                items: 2
+            },
+            1200: {
+                items: 3
+            }
+        }
+    });
+
+});
+</script>
