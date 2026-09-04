@@ -10607,3 +10607,60 @@ img {
 .booking-float i{
   font-size: 20px;
 }
+
+/* =================================
+   WINNERSTABLE PHOTO CAROUSEL
+================================= */
+
+.photo-carousel-section {
+    padding: 80px 0;
+}
+
+.winnerstable-carousel {
+    position: relative;
+}
+
+/* Hide Previous / Next buttons completely */
+.winnerstable-carousel .tns-controls {
+    display: none !important;
+}
+
+/* Dots below the images */
+.photo-carousel-section .tns-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 8px;
+}
+
+/* Individual dots */
+.photo-carousel-section .tns-nav button {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 50%;
+    background: #d0d0d0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Active dot */
+.photo-carousel-section .tns-nav button.tns-nav-active {
+    width: 28px;
+    border-radius: 10px;
+    background: #000;
+}
+
+/* Hover */
+.photo-carousel-section .tns-nav button:hover {
+    background: #555;
+}
+
+.team-member .social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
